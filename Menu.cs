@@ -16,5 +16,12 @@ namespace Gimnastika1
         {
             InitializeComponent();
         }
+
+        private void osobeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Podaci form1 = new Podaci("osoba");
+            form1.ShowDialog();
+
+        }
     }
 }

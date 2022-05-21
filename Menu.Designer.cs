@@ -61,6 +61,7 @@
             this.osobeToolStripMenuItem.Name = "osobeToolStripMenuItem";
             this.osobeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.osobeToolStripMenuItem.Text = "Osobe";
+            this.osobeToolStripMenuItem.Click += new System.EventHandler(this.osobeToolStripMenuItem_Click);
             // 
             // takmicenjaToolStripMenuItem
             // 
