@@ -15,7 +15,6 @@ namespace Gimnastika1
     {
         SqlConnection veza = Konekcija.zakonektuj();
         DataTable raspodela;
-        SqlDataAdapter adapter;
         int br = 0;
         string komanda;
         public Raspodela()
@@ -128,6 +127,69 @@ namespace Gimnastika1
         private void desnje_Click(object sender, EventArgs e)
         {
             br=raspodela.Rows.Count - 1;
+            FeelingTheCombos();
+        }
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            komanda = $"update raspodela set idOsobe= {cmbOsoba.SelectedValue.ToString()}, idNivoa= {cmbNivo.SelectedValue.ToString()}, idGodine={cmbGodina.SelectedValue.ToString()} where id = {raspodela.Rows[br]["id"].ToString()}";
+            SqlCommand comm = new SqlCommand(komanda, veza);
+            try
+            {
+                veza.Open();
+                comm.ExecuteNonQuery();
+                veza.Close();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+                throw;
+            }
+            Zaucitaj();
+            FeelingTheCombos();
+        }
+
+        private void insert_Click(object sender, EventArgs e)
+        {
+            komanda = $"insert into raspodela (idOsobe, idNivoa, idGodine) values ({cmbOsoba.SelectedValue.ToString()}, {cmbNivo.SelectedValue.ToString()}, {cmbGodina.SelectedValue.ToString()})";
+            SqlCommand comm = new SqlCommand(komanda, veza);
+            try
+            {
+                veza.Open();
+                comm.ExecuteNonQuery();
+                veza.Close();
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+                throw;
+            }
+            Zaucitaj();
+            FeelingTheCombos();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            komanda = $"delete from raspodela where id = {raspodela.Rows[br]["id"].ToString()}";
+            SqlCommand comm = new SqlCommand(komanda, veza);
+            bool brisano = false;
+            try
+            {
+                veza.Open();
+                comm.ExecuteNonQuery();
+                veza.Close();
+                brisano = true;
+            }
+            catch (Exception Error)
+            {
+                MessageBox.Show(Error.Message);
+                throw;
+            }
+            if (brisano)
+            {
+                br--;
+            }
+            Zaucitaj();
             FeelingTheCombos();
         }
     }

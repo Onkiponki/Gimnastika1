@@ -34,6 +34,7 @@
             this.takmicenjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.godineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.raspodelaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pregledOcenaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.podaciToolStripMenuItem,
-            this.raspodelaToolStripMenuItem});
+            this.raspodelaToolStripMenuItem,
+            this.pregledOcenaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -61,21 +63,21 @@
             // osobeToolStripMenuItem
             // 
             this.osobeToolStripMenuItem.Name = "osobeToolStripMenuItem";
-            this.osobeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.osobeToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.osobeToolStripMenuItem.Text = "Osobe";
             this.osobeToolStripMenuItem.Click += new System.EventHandler(this.osobeToolStripMenuItem_Click);
             // 
             // takmicenjaToolStripMenuItem
             // 
             this.takmicenjaToolStripMenuItem.Name = "takmicenjaToolStripMenuItem";
-            this.takmicenjaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.takmicenjaToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.takmicenjaToolStripMenuItem.Text = "Takmicenja";
             this.takmicenjaToolStripMenuItem.Click += new System.EventHandler(this.takmicenjaToolStripMenuItem_Click);
             // 
             // godineToolStripMenuItem
             // 
             this.godineToolStripMenuItem.Name = "godineToolStripMenuItem";
-            this.godineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.godineToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.godineToolStripMenuItem.Text = "Godine";
             this.godineToolStripMenuItem.Click += new System.EventHandler(this.godineToolStripMenuItem_Click);
             // 
@@ -85,6 +87,13 @@
             this.raspodelaToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
             this.raspodelaToolStripMenuItem.Text = "Raspodela";
             this.raspodelaToolStripMenuItem.Click += new System.EventHandler(this.raspodelaToolStripMenuItem_Click);
+            // 
+            // pregledOcenaToolStripMenuItem
+            // 
+            this.pregledOcenaToolStripMenuItem.Name = "pregledOcenaToolStripMenuItem";
+            this.pregledOcenaToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
+            this.pregledOcenaToolStripMenuItem.Text = "Pregled Ocena";
+            this.pregledOcenaToolStripMenuItem.Click += new System.EventHandler(this.pregledOcenaToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -110,5 +119,6 @@
         private System.Windows.Forms.ToolStripMenuItem takmicenjaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem godineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem raspodelaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pregledOcenaToolStripMenuItem;
     }
 }

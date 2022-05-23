@@ -151,6 +151,7 @@
             this.update.TabIndex = 10;
             this.update.Text = "Update";
             this.update.UseVisualStyleBackColor = true;
+            this.update.Click += new System.EventHandler(this.update_Click);
             // 
             // insert
             // 
@@ -161,6 +162,7 @@
             this.insert.TabIndex = 11;
             this.insert.Text = "Insert";
             this.insert.UseVisualStyleBackColor = true;
+            this.insert.Click += new System.EventHandler(this.insert_Click);
             // 
             // delete
             // 
@@ -171,6 +173,7 @@
             this.delete.TabIndex = 12;
             this.delete.Text = "Delete";
             this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // desno
             // 

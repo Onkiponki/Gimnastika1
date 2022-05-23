@@ -29,13 +29,26 @@ namespace Gimnastika1
         }
         private void Podaci_Load(object sender, EventArgs e)
         {
-            komanda = $"select * from {tabela}";
-            adapter = new SqlDataAdapter(komanda,conn);
-             dt = new DataTable();
-            adapter.Fill(dt);
-            dataGridView1.DataSource = dt;
-            dataGridView1.Columns["id"].ReadOnly = true;
-            dataGridView1.AllowUserToAddRows = true;
+            if(tabela != "rezultat")
+            {
+                komanda = $"select * from {tabela}";
+                adapter = new SqlDataAdapter(komanda, conn);
+                dt = new DataTable();
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.Columns["id"].Visible = false;
+                dataGridView1.AllowUserToAddRows = true;
+            }
+            else
+            {
+                komanda = $"select ime + prezime as Ime, brojBodova as Skor, ocena as Ocena from rezultat join raspodela on raspodela.id = rezultat.idRaspodele join osoba on osoba.id = raspodela.idOsobe join godina on godina.id = raspodela.idGodine join nivoTakmicenja on nivoTakmicenja.id = raspodela.idNivoa";
+                MessageBox.Show(komanda);
+                adapter = new SqlDataAdapter(komanda, conn);
+                dt = new DataTable();
+                adapter.Fill(dt);
+                dataGridView1.DataSource = dt;
+                dataGridView1.AllowUserToAddRows = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

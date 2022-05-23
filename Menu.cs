@@ -42,5 +42,11 @@ namespace Gimnastika1
             form1.Show();
 
         }
+
+        private void pregledOcenaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Podaci form1 = new Podaci("rezultat");
+            form1.ShowDialog();
+        }
     }
 }
