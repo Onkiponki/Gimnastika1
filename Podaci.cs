@@ -38,6 +38,7 @@ namespace Gimnastika1
                 dataGridView1.DataSource = dt;
                 dataGridView1.Columns["id"].Visible = false;
                 dataGridView1.AllowUserToAddRows = true;
+                    
             }
             else
             {
@@ -47,7 +48,7 @@ namespace Gimnastika1
                 dt = new DataTable();
                 adapter.Fill(dt);
                 dataGridView1.DataSource = dt;
-                dataGridView1.AllowUserToAddRows = true;
+                dataGridView1.AllowUserToAddRows = false;
             }
         }
 
