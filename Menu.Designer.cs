@@ -33,13 +33,15 @@
             this.osobeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.takmicenjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.godineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.raspodelaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.podaciToolStripMenuItem});
+            this.podaciToolStripMenuItem,
+            this.raspodelaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -68,12 +70,21 @@
             this.takmicenjaToolStripMenuItem.Name = "takmicenjaToolStripMenuItem";
             this.takmicenjaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.takmicenjaToolStripMenuItem.Text = "Takmicenja";
+            this.takmicenjaToolStripMenuItem.Click += new System.EventHandler(this.takmicenjaToolStripMenuItem_Click);
             // 
             // godineToolStripMenuItem
             // 
             this.godineToolStripMenuItem.Name = "godineToolStripMenuItem";
             this.godineToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.godineToolStripMenuItem.Text = "Godine";
+            this.godineToolStripMenuItem.Click += new System.EventHandler(this.godineToolStripMenuItem_Click);
+            // 
+            // raspodelaToolStripMenuItem
+            // 
+            this.raspodelaToolStripMenuItem.Name = "raspodelaToolStripMenuItem";
+            this.raspodelaToolStripMenuItem.Size = new System.Drawing.Size(73, 20);
+            this.raspodelaToolStripMenuItem.Text = "Raspodela";
+            this.raspodelaToolStripMenuItem.Click += new System.EventHandler(this.raspodelaToolStripMenuItem_Click);
             // 
             // Menu
             // 
@@ -98,5 +109,6 @@
         private System.Windows.Forms.ToolStripMenuItem osobeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem takmicenjaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem godineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem raspodelaToolStripMenuItem;
     }
 }

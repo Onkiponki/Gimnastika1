@@ -38,7 +38,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(21, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(542, 339);
+            this.dataGridView1.Size = new System.Drawing.Size(558, 339);
             this.dataGridView1.TabIndex = 0;
             // 
             // button1
@@ -50,6 +50,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Save and Exit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Podaci
             // 

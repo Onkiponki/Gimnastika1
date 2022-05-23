@@ -14,6 +14,8 @@ namespace Gimnastika1
     public partial class Podaci : Form
     {
         string tabela;
+        DataTable dt;
+        SqlDataAdapter adapter;
         SqlConnection conn = Konekcija.zakonektuj();
         string komanda;
         public Podaci()
@@ -28,11 +30,25 @@ namespace Gimnastika1
         private void Podaci_Load(object sender, EventArgs e)
         {
             komanda = $"select * from {tabela}";
-            SqlDataAdapter adapter = new SqlDataAdapter(komanda,conn);
-            DataTable dt = new DataTable();
+            adapter = new SqlDataAdapter(komanda,conn);
+             dt = new DataTable();
             adapter.Fill(dt);
             dataGridView1.DataSource = dt;
             dataGridView1.Columns["id"].ReadOnly = true;
+            dataGridView1.AllowUserToAddRows = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataTable dataTable = new DataTable();
+            dataTable = dt.GetChanges();
+            adapter.UpdateCommand = new SqlCommandBuilder(adapter).GetUpdateCommand();
+            if (dataTable != null)
+            {
+                adapter.Update(dataTable);
+            }
+            this.Close();
+
         }
     }
 }
